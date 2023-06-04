@@ -2,13 +2,13 @@ import * as THREE from 'three';
 import "./style.css" 
 import gsap from 'gsap';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { Light } from 'three';
+// import { Light } from 'three';
 
 // Create the scene
 const scene = new THREE.Scene();
 
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load('./prev.avif');
+const texture = textureLoader.load('/prev.avif');
 
 scene.background = texture;
 
@@ -49,7 +49,7 @@ const sound = new THREE.Audio( listener );
 
 // load a sound and set it as the Audio object's buffer
 const audioLoader = new THREE.AudioLoader();
-audioLoader.load( 'vaporwave.mp3', function( buffer ) {
+audioLoader.load('/vaporwave.mp3', function( buffer ) {
 	sound.setBuffer( buffer );
 	sound.setLoop( true );
 	sound.setVolume( 0.5 );
