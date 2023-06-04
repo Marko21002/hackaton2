@@ -8,7 +8,7 @@ import { Light } from 'three';
 const scene = new THREE.Scene();
 
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load('prev.avif');
+const texture = textureLoader.load('./prev.avif');
 
 scene.background = texture;
 
